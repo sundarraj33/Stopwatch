@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <title>Time Set</title>
-        <meta name="author" content="sundar raj">
-        <meta name="Description" content="Sample on Time">
-        <meta name="viewport" content="width=device-width , initial-scale=1.0">
-    </head>
-    <body>
-        <h1>Javascript Timesssss</h1>
-        <h2 id="time_zone"></h2>
-
-    </body>
-    <script>
-        var times = setInterval(()=>{
-            var date=new Date();  
-            var day=date.getDate();  
-            var month=date.getMonth()+1;  
-            var year=date.getFullYear();  
-            var h=date.getHours().toString();
-            var m=date.getMinutes();
-            var s=date.getSeconds();
-            // document.getElementById('txt').innerHTML=h+":"+m+":"+s;
-            // console.log("<br>Date is: "+day+"-"+month+"-"+year h+":"+m+":"+s ); 
-            var time_zone =  day.toString().padStart(2,0)+ "-" +month.toString().padStart(2,0)+ "-"+ year+" "+h.toString().padStart(2,0)+":"+m.toString().padStart(2,0)+":"+s.toString().padStart(2,0);
-            document.querySelector("#time_zone").innerText = time_zone;
-        },1000);
-    </script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Sundar raj">
+    <meta name="Description" content="">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="card"> 
+        <div class="card_box">
+            <!-- <center><h4 id="title">Simple Stopwatch Project - HTML, CSS, JavaScript</h4></center> -->
+            <span id="Stopwatch">
+                <span id='hour'>00</span>:
+                <span id='min'>00</span>:
+                <span id='sec'>00</span>:
+                <span id='millisecond'>000</span>
+            </span>
+            <div class="button_div">
+                <button id="start" class="btn">Start</button>
+                <button id="resume" class="btn">Resume</button>
+                <button id="stop" class="btn">Stop</button>
+                <button id="reset" class="btn">Reset</button>
+            </div>
+        </div>   
+    </div>
+    <script src="index.js"></script>
+</body>
 </html>
